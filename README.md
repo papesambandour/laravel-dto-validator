@@ -1,4 +1,4 @@
-# Laravel DTO Validator (DigitalPi)
+# Laravel DTO Validator 
 
 This package allows you to use DTOs with attribute-based validation, just like in Spring Boot.
 

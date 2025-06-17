@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DigitalPi\\DtoValidator\\": "src/"
+            "DtoValidator\\DtoValidator\\": "src/"
         }
     },
     "autoload-dev": {
