@@ -1,5 +1,6 @@
 {
     "name": "digitalpi/laravel-dto-validator",
+    "version": "1.0.0",
     "description": "DTO injector and validator with attributes",
     "autoload": {
         "psr-4": {
