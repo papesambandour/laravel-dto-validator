@@ -1,6 +1,6 @@
 {
     "name": "digitalpi/laravel-dto-validator",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "DTO injector and validator with attributes, inspired by Spring Boot bean validation.",
     "type": "library",
     "license": "MIT",
