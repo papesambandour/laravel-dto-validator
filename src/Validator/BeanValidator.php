@@ -5,29 +5,13 @@ use DtoValidator\Attributes\Rules;
 use Illuminate\Support\Facades\Validator;
 use ReflectionClass;
 use ReflectionProperty;
-
+use Illuminate\Contracts\Validation\Validator as ValidatorContract;
 class BeanValidator
 {
-    public static function validate(object $dto): void
+    public static function validate(object $dto): ValidatorContract
     {
         list($data, $rules) = self::extractedDataAndRuleFromDto($dto);
-        $validator = Validator::make($data, $rules);
-        if ($validator->fails()) {
-            $request = request();
-            if ($request->expectsJson()  || $request->isJson()) {
-                abort(response()->json([
-                    'message' => 'Validation failed',
-                    'errors' => $validator->errors()
-                ], 422));
-            } else {
-                redirect()->back()
-                    ->withErrors($validator)
-                    ->withInput()
-                    ->send();
-
-                exit;
-            }
-        }
+        return  Validator::make($data, $rules);
 
     }
 
